@@ -208,7 +208,7 @@ accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
 print(accuracy.eval({x: mnist.test.images, y_: mnist.test.labels}))
 ```
 
-![这里写图片描述](//img-blog.csdn.net/20180321200059899?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L1l1YmFvTG91aXNMaXU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![这里写图片描述](http://img-blog.csdn.net/20180321200059899?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L1l1YmFvTG91aXNMaXU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 0.9101，这个结果其实比较一般。这是因为我们仅仅使用了一个非常简单的模型。如果加上一些简单的改进，比如卷积神经网络等，能够轻松0.99+。博主也会继续深入讲解tensorflow，欢迎大家关注讨论。
 
