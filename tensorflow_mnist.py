@@ -19,7 +19,7 @@ y = tf.nn.softmax(tf.matmul(x,W) + b)
 
 y_ = tf.placeholder("float", [None,10])
 # cross_entropy = -tf.reduce_sum(y_*tf.log(y))
-cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_*tf.log(y), reduction_indices = [1]))
+cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_*tf.log(y + 1e-10), reduction_indices = [1]))
 train_step = tf.train.GradientDescentOptimizer(0.6).minimize(cross_entropy)
 
 tf.global_variables_initializer().run()
